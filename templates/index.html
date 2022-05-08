@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<br/>
+<h3 class="text-center">Comment maîtriser Flask ?</h3>
+<br/>
+<p class="lead">Flask s'adresse aux développeurs Python qui souhaitent créer et maintenir leurs premières applications à base de Web services.
+    <br/><br/>
+    <strong>Prérequis :</strong>
+    <br/><br/>
+Pour suivre les cours Flask, il est nécessaire de maîtriser le langage de programmation Python.</p>
+
+{% if tasks %}
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Etapes à faire</th>
+                <th>Ajoutées le ..</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for task in tasks %}
+            <tr>
+                <th>
+                    <p>{{task.name}}</p>
+                    <!-- <a href="/update/{{task.id}}">{{task.name}}</a> -->
+                </th>
+                <th>{{task.created_at.date()}}</th>
+                <th>
+                    <a href="/delete/{{task.id}}" class="btn btn-danger">Supprimer</a>
+                </th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>Rien à faire ...</p>
+{% endif %}
+    <!-- Ajout du formulaire et du bouton ajouter -->
+{% include "partials/_form.html" %}
+
+</div>
+{% endblock content%}

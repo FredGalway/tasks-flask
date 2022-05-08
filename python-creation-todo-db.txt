@@ -1,0 +1,22 @@
+from app import db
+from app import Task
+
+# Création base de données
+db.create_all()
+
+# Ajout d'une tâche T.O.D.O (cf Script 'app.py')
+task = Task(name="Apprendre Flask")
+db.session.add(task)
+db.session.commit()
+
+# Requête et execution dans Python
+tasks = Task.query.all()
+tasks
+
+# Pour effacer une ligne :
+db.session.delete(task)
+db.session.commit()
+
+# Pour plus d'infos
+# https://esmithy.net/2020/06/20/sqlalchemy-cascade-delete/
+# https://www.youtube.com/watch?v=F8HyiGoFzfo&list=PLFVUGoYSTf1YXepCHyrFHSqMC2eOHs_1a&index=12

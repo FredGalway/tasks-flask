@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br/>
+<h3 class="text-center">A Propos de Flask</h3>
+<br/>
+<p class="lead">
+    Flask est un micro framework open-source de développement web en Python. Il est classé comme microframework car il est très léger.
+    Flask a pour objectif de garder un noyau simple mais extensible.
+    Il n'intègre pas de système d'authentification, pas de couche d'abstraction de base de données, ni d'outil de validation de formulaires.
+    Cependant, de nombreuses extensions permettent d'ajouter facilement des fonctionnalités.
+    Il est distribué sous licence BSD4.
+</p>
+<br/>
+<br/>
+
+
+<h3 class="text-center">Histoire</h3>
+<br/>
+<p class="lead">
+    Flask a été créé initialement par Armin Ronacher comme étant un poisson d'avril5. Le souhait de Ronacher était de réaliser un framework web contenu dans un seul fichier Python mais pouvant maintenir des applications très demandées.
+
+En 2018, Flask était élu "Framework web le plus populaire" par le Python Developers Survey6. En janvier 2020, il cumulait plus de 49000 étoiles sur GitHub7, plus que n'importe quel autre framework de développement web Python.
+</p>
+<br/>
+<br/>
+
+
+<h3 class="text-center">Fonctionnalités</h3>
+<br/>
+<p class="lead">
+    Flask se base sur deux modules werkzeug et jinja2 pour proposer plusieurs des fonctionnalités suivantes :
+    <ul>
+        <li>Serveur de développement8 et debugger</li>
+        <li>Simplifie l'écriture de tests unitaires</li>
+        <li>Moteur de template pour le rendu HTML</li>
+        <li>Supporte les cookies sécurisés (session)</li>
+        <li>Entièrement compatible avec WSGI 1.0</li>
+        <li>Se base sur l'Unicode</li>
+        <li>Documentation complète</li>
+        <li>Déploiement aisé sur plusieurs hébergeurs</li>
+        <li>Ajout de fonctionnalités via les extensions</li>
+    </ul>
+</p>
+<br/>
+<a href="https://fr.wikipedia.org/wiki/Flask_(framework)">Source Wikipédia</a>
+<br/>
+<br/>
+
+{% endblock%}
